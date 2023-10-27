@@ -81,5 +81,5 @@ If you found error this `Error: Cannot find module 'dotenv'`
 
 Install dotenv module
 ```
-Error: Cannot find module 'dotenv'
+npm install dotenv
 ```
