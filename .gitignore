@@ -130,5 +130,5 @@ dist
 .pnp.*
 .DS_Store
 /test-results/
-/playwright-report/
-/playwright/.cache/
+# /playwright-report/
+# /playwright/.cache/
