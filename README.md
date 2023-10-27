@@ -75,3 +75,11 @@ npx playwright test
 1. Create Test File: Create a new .test.js file under the relevant directory inside the tests/ folder.
 2. Write Test: write your test cases in the newly created .test.js file.
 3. Run Test: Use the npx test command to run your tests and validate that they are working as expected.
+
+### Troubleshot
+If you found error this `Error: Cannot find module 'dotenv'`
+
+Install dotenv module
+```
+Error: Cannot find module 'dotenv'
+```

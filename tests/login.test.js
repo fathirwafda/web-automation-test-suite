@@ -8,5 +8,5 @@ test('login test', async ({ page }) => {
     await home.login(process.env.USERNAME, process.env.PASSWORD);
 
     const url = page.url();
-    expect(url).toContain('/inventory.html');  // Assuming the URL changes on successful login
+    expect(url).toContain('/inventory.html');  // Asserting the URL changes on successful login
 });

@@ -8,7 +8,7 @@ class HomePage {
 
   async navigate() {
       await this.page.goto(process.env.BASE_URL);
-      await this.page.setViewportSize({ width: 1366, height: 768 });  // Example size; adjust as needed.
+      // await this.page.setViewportSize({ width: 1366, height: 768 });  // Example size; adjust as needed.
 
   }
 
