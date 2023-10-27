@@ -48,7 +48,7 @@ project-root
 ```
 
 ### Setup
-1. Install Node.js: If not already installed, download and install Node.js from [Node.js Official Website](https://nodejs.org/).
+1. Install Node.js: If not already installed yet, download and install Node.js from [Node.js Official Website](https://nodejs.org/).
 
 2. Install Dependencies: Navigate to the project root directory in the terminal and run the following command to install the necessary dependencies:
 
