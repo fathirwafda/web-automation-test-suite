@@ -16,7 +16,11 @@ class HomePage {
       await this.page.fill('input[data-test="username"]', username);
       await this.page.fill('input[data-test="password"]', password);
       await this.page.click('input[data-test="login-button"]');
-      await expect(this.page).toHaveURL(/\/inventory/);
+    //   await expect(this.page).toHaveURL(/\/inventory/);
+  }
+
+  async verifyErrorLogin() {
+    return await this.page.isVisible('.error-button');
   }
 }
 

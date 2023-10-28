@@ -13,25 +13,38 @@ test.describe('Checkout process', () => {
 
       await home.navigate();
       await home.login(process.env.USERNAME, process.env.PASSWORD);
-       // Sort by highest price and select first product
-       await productPage.sortProductsByPrice();
-       await productPage.selectFirstProduct();
+      const url = page.url();
+      expect(url).toContain('/inventory.html'); 
+      // Sort by highest price and select first product
+      await productPage.sortProductsByPrice();
+      await productPage.selectFirstProduct();
 
-       // Add the selected product to cart
-       await productPage.addToCart();
+      // Add the selected product to cart
+      await productPage.addToCart();
 
       checkoutPage = new CheckoutPage(page);
     });
 
-    test('should handle checkout process', async () => {
-        await checkoutPage.navigateToCart();
-        await checkoutPage.proceedToCheckout();
-        await checkoutPage.fillCheckoutDetails('John', 'Fubar', '12345'); // Example data
+    test('should handle successful checkout process', async () => {
+      await checkoutPage.navigateToCart();
+      await checkoutPage.proceedToCheckout();
+      await checkoutPage.fillCheckoutDetails('John', 'Fubar', '12345'); // Example data
 
-        await checkoutPage.finishCheckout();
+      await checkoutPage.finishCheckout();
 
-        // Verify that the order is complete
-        const isOrderComplete = await checkoutPage.isOrderConfirmed();
-        expect(isOrderComplete).toBe(true);
+      // Verify that the order is complete
+      const isOrderComplete = await checkoutPage.isOrderConfirmed();
+      expect(isOrderComplete).toBe(true);
+    });
+
+    test('The checkout process is failed', async () => {
+      await checkoutPage.navigateToCart();
+      await checkoutPage.proceedToCheckout();
+
+      await checkoutPage.continueCheckout();
+
+      // Verify that the order is complete
+      const isOrderComplete = await checkoutPage.isOrderConfirmed();
+      expect(isOrderComplete).toBe(false);
     });
 });

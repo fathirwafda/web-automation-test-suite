@@ -10,7 +10,9 @@ test.describe('Product interactions', () => {
 
       await home.navigate();
       await home.login(process.env.USERNAME, process.env.PASSWORD);
-
+      const url = page.url();
+      expect(url).toContain('/inventory.html'); 
+      
       productsPage = new ProductsPage(page);
     });
 

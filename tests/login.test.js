@@ -1,12 +1,28 @@
 const { test, expect } = require('@playwright/test');
 const { HomePage } = require('../pages/HomePage');
 
-test('login test', async ({ page }) => {
-    const home = new HomePage(page);
+test.describe('Login scenarios', () => {
 
-    await home.navigate();
-    await home.login(process.env.USERNAME, process.env.PASSWORD);
+    test('login is succeeded', async ({ page }) => {
+        const home = new HomePage(page);
 
-    const url = page.url();
-    expect(url).toContain('/inventory.html');  // Asserting the URL changes on successful login
+        await home.navigate();
+        await home.login(process.env.USERNAME, process.env.PASSWORD);
+
+        const url = page.url();
+        expect(url).toContain('/inventory.html');  // Asserting the URL changes on successful login
+    });
+
+    test('Login is failed', async ({ page }) => {
+        const home = new HomePage(page);
+
+        await home.navigate();
+        await home.login(process.env.USERNAME, process.env.WRONG_PASSWORD);
+
+        // Make sure the login is invalid
+        const isLoginInvalid = await home.verifyErrorLogin();
+        expect(isLoginInvalid).toBe(true);
+
+    });
+
 });

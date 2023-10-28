@@ -20,6 +20,10 @@ class CheckoutPage {
       await this.page.click('.btn_primary');
   }
 
+  async continueCheckout(){
+    await this.page.click('#continue');
+  }
+
   async finishCheckout() {
       await this.page.click('#finish');
   }
