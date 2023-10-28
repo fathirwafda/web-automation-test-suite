@@ -92,7 +92,6 @@ To integrate with CI/CD would be different for each tools. The following sample 
 1. Define the pipeline on .gitlab-ci.yml: In the root directory of your repository, create or edit the .gitlab-ci.yml:
 
 ```yaml
-code```
 image: node:14  # Use the desired Node.js version
 
 stages:
