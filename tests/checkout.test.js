@@ -28,7 +28,8 @@ test.describe('Checkout process', () => {
     test('should handle successful checkout process', async () => {
       await checkoutPage.navigateToCart();
       await checkoutPage.proceedToCheckout();
-      await checkoutPage.fillCheckoutDetails('John', 'Fubar', '12345'); // Example data
+      // Example data
+      await checkoutPage.fillCheckoutDetails(process.env.BUYER_FIRST_NAME, process.env.BUYER_LAST_NAME, process.env.POSTAL_CODE); 
 
       await checkoutPage.finishCheckout();
 
