@@ -26,6 +26,6 @@ jobs:
 
       - name: Npx setup
         run: npx playwright install 
-i
+
       - name: Run tests
         run: npx playwright test
