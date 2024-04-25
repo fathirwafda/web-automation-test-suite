@@ -21,7 +21,6 @@ jobs:
             libvpx-dev \
             libopus-dev \
             libharfbuzz-dev \
-            libflite-dev \
             libgles2-mesa-dev \
             flite1-dev
           npm install
