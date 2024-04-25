@@ -26,8 +26,9 @@ jobs:
             libsoup2.4-dev \
             woff2 \
             libevent-dev \
-            libgstreamer-plugins-base1.0-dev \
-            libgstreamer1.0-dev \
+            libunwind-dev \
+            #libgstreamer-plugins-base1.0-dev \
+            #libgstreamer1.0-dev \
             libhyphen-dev \
             #libmanette-dev \
             #libx264-dev
