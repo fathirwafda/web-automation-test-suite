@@ -17,11 +17,11 @@ jobs:
         run: |
           sudo apt-get update
           sudo apt-get install -y \
-            libvpx5 \
-            libopus0 \
-            libharfbuzz0b \
-            libflite1 \
-            libGLESv2-2
+            libvpx-dev \
+            libopus-dev \
+            libharfbuzz-dev \
+            libflite-dev \
+            libgles2-mesa-dev
           npm install
 
       - name: Npx setup
