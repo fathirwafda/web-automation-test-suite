@@ -22,7 +22,15 @@ jobs:
             libopus-dev \
             libharfbuzz-dev \
             libgles2-mesa-dev \
-            flite1-dev
+            libx264-dev \
+            libsoup2.4-dev \
+            libwoff2-1 \
+            libevent-dev \
+            libgstreamer-plugins-base1.0-dev \
+            libgstreamer1.0-dev \
+            libhyphen-dev \
+            libmanette-dev \
+            libx264-dev
           npm install
 
       - name: Npx setup
