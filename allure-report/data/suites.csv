@@ -1,0 +1,7 @@
+"Status","Start Time","Stop Time","Duration in ms","Parent Suite","Suite","Sub Suite","Test Class","Test Method","Name","Description"
+"passed","Thu Apr 25 08:39:51 WIB 2024","Thu Apr 25 08:39:53 WIB 2024","2644","webkit","login.test.js","Login scenarios","","","Login is failed",""
+"passed","Thu Apr 25 08:39:54 WIB 2024","Thu Apr 25 08:39:57 WIB 2024","3445","webkit","product.test.js","Product interactions","","","choose the first product",""
+"passed","Thu Apr 25 08:39:53 WIB 2024","Thu Apr 25 08:39:58 WIB 2024","4091","webkit","product.test.js","Product interactions","","","sort products by highest price",""
+"passed","Thu Apr 25 08:39:46 WIB 2024","Thu Apr 25 08:39:50 WIB 2024","4649","webkit","checkout.test.js","Checkout process","","","should handle successful checkout process",""
+"passed","Thu Apr 25 08:39:50 WIB 2024","Thu Apr 25 08:39:54 WIB 2024","3414","webkit","login.test.js","Login scenarios","","","login is succeeded",""
+"passed","Thu Apr 25 08:39:46 WIB 2024","Thu Apr 25 08:39:50 WIB 2024","4088","webkit","checkout.test.js","Checkout process","","","The checkout process is failed",""
