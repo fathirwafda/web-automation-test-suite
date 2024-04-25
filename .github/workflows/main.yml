@@ -24,13 +24,13 @@ jobs:
             libgles2-mesa-dev \
             libx264-dev \
             libsoup2.4-dev \
-            libwoff2-1 \
+            woff2 \
             libevent-dev \
             libgstreamer-plugins-base1.0-dev \
             libgstreamer1.0-dev \
             libhyphen-dev \
-            libmanette-dev \
-            libx264-dev
+            #libmanette-dev \
+            #libx264-dev
           npm install
 
       - name: Npx setup
